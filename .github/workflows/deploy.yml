@@ -26,4 +26,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          publish_dir: ./mdBook/book  # Directory where mdBook outputs the built book
+          publish_dir: ./docs/book  # Directory where mdBook outputs the built book
