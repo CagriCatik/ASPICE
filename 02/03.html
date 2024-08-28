@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Usage of the term “system”</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../01/00.html"><strong aria-hidden="true">1.</strong> Motivation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../01/01.html"><strong aria-hidden="true">1.1.</strong> Situations</a></li><li class="chapter-item expanded "><a href="../01/02.html"><strong aria-hidden="true">1.2.</strong> Improvement</a></li></ol></li><li class="chapter-item expanded "><a href="../02/00.html"><strong aria-hidden="true">2.</strong> Introduction to Automotive SPICE</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../02/01.html"><strong aria-hidden="true">2.1.</strong> About ASPICE</a></li><li class="chapter-item expanded "><a href="../02/02.html"><strong aria-hidden="true">2.2.</strong> Objectives</a></li><li class="chapter-item expanded "><a href="../02/03.html" class="active"><strong aria-hidden="true">2.3.</strong> Usage of the term “system”</a></li></ol></li><li class="chapter-item expanded "><a href="../03/00.html"><strong aria-hidden="true">3.</strong> Process dimension in ASPICE</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../03/01.html"><strong aria-hidden="true">3.1.</strong> ISO/IEC 33020:2015</a></li><li class="chapter-item expanded "><a href="../03/02.html"><strong aria-hidden="true">3.2.</strong> Level 0: Incomplete process</a></li><li class="chapter-item expanded "><a href="../03/03.html"><strong aria-hidden="true">3.3.</strong> Level 1: Performed process</a></li><li class="chapter-item expanded "><a href="../03/04.html"><strong aria-hidden="true">3.4.</strong> Level 2: Managed process</a></li><li class="chapter-item expanded "><a href="../03/05.html"><strong aria-hidden="true">3.5.</strong> Level 3: Established process</a></li></ol></li><li class="chapter-item expanded "><a href="../04/00.html"><strong aria-hidden="true">4.</strong> Capability Dimension and Rating Method</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../04/01.html"><strong aria-hidden="true">4.1.</strong> Rating Scheme NPLF</a></li><li class="chapter-item expanded "><a href="../04/02.html"><strong aria-hidden="true">4.2.</strong> How to rate a level for a process</a></li></ol></li><li class="chapter-item expanded "><a href="../05/00.html"><strong aria-hidden="true">5.</strong> Level 1 - Base Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../05/01.html"><strong aria-hidden="true">5.1.</strong> Best practices and output work products</a></li><li class="chapter-item expanded "><a href="../05/02.html"><strong aria-hidden="true">5.2.</strong> Process descriptions</a></li></ol></li><li class="chapter-item expanded "><a href="../06/00.html"><strong aria-hidden="true">6.</strong> Level 2 - Generic Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../06/01.html"><strong aria-hidden="true">6.1.</strong> Performance management</a></li><li class="chapter-item expanded "><a href="../06/02.html"><strong aria-hidden="true">6.2.</strong> Work product management</a></li></ol></li><li class="chapter-item expanded "><a href="../07/00.html"><strong aria-hidden="true">7.</strong> ASPICE Main Concepts and Assessment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../07/01.html"><strong aria-hidden="true">7.1.</strong> Traceability in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/02.html"><strong aria-hidden="true">7.2.</strong> Bidirectional Traceability in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/03.html"><strong aria-hidden="true">7.3.</strong> Plug-in concept in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/04.html"><strong aria-hidden="true">7.4.</strong> Assessment purpose</a></li></ol></li><li class="chapter-item expanded "><a href="../08/00.html"><strong aria-hidden="true">8.</strong> Process Improvement on Projects</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="understanding-the-term-system-in-aspice-projects"><a class="header" href="#understanding-the-term-system-in-aspice-projects">Understanding the Term "System" in ASPICE Projects</a></h1>
+<p>In ASPICE, the term "system" can have varying interpretations depending on the context within a project, whether it involves an Original Equipment Manufacturer (OEM) or a Tier 1 supplier. The term encompasses a broad spectrum of components, ranging from entire vehicles to specific electronic control units (ECUs). Below, we break down the understanding of "system" in both OEM and Tier 1 contexts, reflecting how ASPICE approaches the development and assessment of these systems.</p>
+<h2 id="oem-perspective-the-car-as-a-system"><a class="header" href="#oem-perspective-the-car-as-a-system"><strong>OEM Perspective: The Car as a System</strong></a></h2>
+<p>From the OEM's viewpoint, the entire vehicle or a significant feature within the vehicle is considered the "system." This broader perspective incorporates numerous subsystems and components that collectively ensure the vehicle operates as intended. The system here is complex, encompassing various hardware and software elements integrated into a cohesive unit.</p>
+<ol>
+<li>
+<p><strong>System Architecture:</strong></p>
+<ul>
+<li><strong>Definition:</strong> In the context of a car, the system architecture refers to the communication network within the vehicle, which could include technologies like CAN (Controller Area Network), LIN (Local Interconnect Network), and Ethernet.</li>
+<li><strong>Purpose:</strong> This architecture defines how different ECUs, sensors, and other components communicate and interact with each other to ensure the vehicle functions properly.</li>
+</ul>
+</li>
+<li>
+<p><strong>System Integration:</strong></p>
+<ul>
+<li><strong>Definition:</strong> System integration at the OEM level involves integrating various ECUs and subsystems on a test bench or directly within the vehicle.</li>
+<li><strong>Purpose:</strong> This process ensures that all the individual components work together seamlessly, maintaining overall system integrity and functionality when combined into the full vehicle system.</li>
+</ul>
+</li>
+<li>
+<p><strong>System Testing:</strong></p>
+<ul>
+<li><strong>Definition:</strong> Testing from the OEM perspective includes verifying the entire vehicle or its major subsystems on test tracks or public roads.</li>
+<li><strong>Purpose:</strong> This stage ensures that the vehicle meets all functional, safety, and performance requirements under real-world conditions before it is released to the market.</li>
+</ul>
+</li>
+</ol>
+<h2 id="tier-1-supplier-perspective-the-ecu-as-a-system"><a class="header" href="#tier-1-supplier-perspective-the-ecu-as-a-system"><strong>Tier 1 Supplier Perspective: The ECU as a System</strong></a></h2>
+<p>For Tier 1 suppliers, the "system" often refers to a specific ECU or a part of it, including the software that runs on it. The focus here is more granular, centering on the development and integration of the ECU within the larger vehicle system.</p>
+<ol>
+<li>
+<p><strong>System Requirements:</strong></p>
+<ul>
+<li><strong>Definition:</strong> At this level, system requirements pertain to the detailed specifications of the ECU, including its intended functionality, performance criteria, and interface requirements with other vehicle components.</li>
+<li><strong>Purpose:</strong> These requirements serve as the foundation for developing and validating the ECU, ensuring it meets the OEM’s expectations and integrates well with the broader vehicle system.</li>
+</ul>
+</li>
+<li>
+<p><strong>System Architecture:</strong></p>
+<ul>
+<li><strong>Definition:</strong> The system architecture for an ECU outlines its internal structure, including the hardware and software components, communication interfaces, and overall design.</li>
+<li><strong>Purpose:</strong> This architecture ensures that the ECU is designed to perform its intended functions reliably and can be integrated effectively into the vehicle’s broader system.</li>
+</ul>
+</li>
+<li>
+<p><strong>System Integration:</strong></p>
+<ul>
+<li><strong>Definition:</strong> System integration at the Tier 1 level involves flashing the software onto the ECU and assembling it into its housing, preparing it for installation into the vehicle.</li>
+<li><strong>Purpose:</strong> This process confirms that the software and hardware components of the ECU work together as expected, and that the ECU is ready for further integration into the vehicle.</li>
+</ul>
+</li>
+<li>
+<p><strong>System Testing:</strong></p>
+<ul>
+<li><strong>Definition:</strong> Testing at the ECU level includes functional tests, as well as environmental (ENV) and electromagnetic compatibility (EMC) tests, to ensure the ECU performs under various conditions.</li>
+<li><strong>Purpose:</strong> These tests validate that the ECU meets all operational and regulatory requirements, ensuring it can withstand the harsh conditions of automotive environments while functioning correctly within the vehicle system.</li>
+</ul>
+</li>
+</ol>
+<h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
+<p>In Automotive SPICE (ASPICE) projects, the term "system" is understood differently depending on whether the perspective is from an OEM or a Tier 1 supplier. For an OEM, the system often refers to the entire vehicle or a significant feature within it, with a focus on ensuring that all components work together harmoniously. For a Tier 1 supplier, the system typically refers to an individual ECU, with an emphasis on developing and validating this specific component within the broader vehicle context.</p>
+<p>Understanding these different perspectives is crucial for effective communication and collaboration between OEMs and Tier 1 suppliers, as it ensures that all parties have a clear understanding of the scope and requirements at each level of the system. Automotive SPICE provides the framework to manage and assess these systems effectively, ensuring that both the individual components and the complete vehicle system meet the high standards required in the automotive industry.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../02/02.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../03/00.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../02/02.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../03/00.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

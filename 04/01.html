@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Rating Scheme NPLF</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../01/00.html"><strong aria-hidden="true">1.</strong> Motivation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../01/01.html"><strong aria-hidden="true">1.1.</strong> Situations</a></li><li class="chapter-item expanded "><a href="../01/02.html"><strong aria-hidden="true">1.2.</strong> Improvement</a></li></ol></li><li class="chapter-item expanded "><a href="../02/00.html"><strong aria-hidden="true">2.</strong> Introduction to Automotive SPICE</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../02/01.html"><strong aria-hidden="true">2.1.</strong> About ASPICE</a></li><li class="chapter-item expanded "><a href="../02/02.html"><strong aria-hidden="true">2.2.</strong> Objectives</a></li><li class="chapter-item expanded "><a href="../02/03.html"><strong aria-hidden="true">2.3.</strong> Usage of the term “system”</a></li></ol></li><li class="chapter-item expanded "><a href="../03/00.html"><strong aria-hidden="true">3.</strong> Process dimension in ASPICE</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../03/01.html"><strong aria-hidden="true">3.1.</strong> ISO/IEC 33020:2015</a></li><li class="chapter-item expanded "><a href="../03/02.html"><strong aria-hidden="true">3.2.</strong> Level 0: Incomplete process</a></li><li class="chapter-item expanded "><a href="../03/03.html"><strong aria-hidden="true">3.3.</strong> Level 1: Performed process</a></li><li class="chapter-item expanded "><a href="../03/04.html"><strong aria-hidden="true">3.4.</strong> Level 2: Managed process</a></li><li class="chapter-item expanded "><a href="../03/05.html"><strong aria-hidden="true">3.5.</strong> Level 3: Established process</a></li></ol></li><li class="chapter-item expanded "><a href="../04/00.html"><strong aria-hidden="true">4.</strong> Capability Dimension and Rating Method</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../04/01.html" class="active"><strong aria-hidden="true">4.1.</strong> Rating Scheme NPLF</a></li><li class="chapter-item expanded "><a href="../04/02.html"><strong aria-hidden="true">4.2.</strong> How to rate a level for a process</a></li></ol></li><li class="chapter-item expanded "><a href="../05/00.html"><strong aria-hidden="true">5.</strong> Level 1 - Base Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../05/01.html"><strong aria-hidden="true">5.1.</strong> Best practices and output work products</a></li><li class="chapter-item expanded "><a href="../05/02.html"><strong aria-hidden="true">5.2.</strong> Process descriptions</a></li></ol></li><li class="chapter-item expanded "><a href="../06/00.html"><strong aria-hidden="true">6.</strong> Level 2 - Generic Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../06/01.html"><strong aria-hidden="true">6.1.</strong> Performance management</a></li><li class="chapter-item expanded "><a href="../06/02.html"><strong aria-hidden="true">6.2.</strong> Work product management</a></li></ol></li><li class="chapter-item expanded "><a href="../07/00.html"><strong aria-hidden="true">7.</strong> ASPICE Main Concepts and Assessment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../07/01.html"><strong aria-hidden="true">7.1.</strong> Traceability in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/02.html"><strong aria-hidden="true">7.2.</strong> Bidirectional Traceability in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/03.html"><strong aria-hidden="true">7.3.</strong> Plug-in concept in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/04.html"><strong aria-hidden="true">7.4.</strong> Assessment purpose</a></li></ol></li><li class="chapter-item expanded "><a href="../08/00.html"><strong aria-hidden="true">8.</strong> Process Improvement on Projects</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="assessment-rating-scheme-nplf-in-aspice"><a class="header" href="#assessment-rating-scheme-nplf-in-aspice">Assessment Rating Scheme “NPLF” in ASPICE</a></h1>
+<p>The <strong>NPLF assessment rating scheme</strong> is a critical component of the Automotive SPICE (ASPICE) framework, used to determine the capability of processes based on the achievement of specific <strong>Process Attributes (PA)</strong>. Instead of relying on percentage-based evaluations, ASPICE uses the NPLF scheme to rate each process attribute, which then informs the overall capability level of the process. Below, we explore the NPLF scheme and how it is applied within the ASPICE assessment framework.</p>
+<h2 id="understanding-the-nplf-rating-scheme"><a class="header" href="#understanding-the-nplf-rating-scheme"><strong>Understanding the NPLF Rating Scheme</strong></a></h2>
+<p>The NPLF scheme categorizes the achievement of process attributes into four distinct levels:</p>
+<ol>
+<li>
+<p><strong>N – Not Achieved (0% - 15%)</strong></p>
+<ul>
+<li><strong>Description:</strong> The process attribute has not been achieved. There is little to no evidence that the attribute has been addressed.</li>
+<li><strong>Implication:</strong> A rating of "N" indicates significant gaps in the process, requiring substantial improvement before the process can be considered capable at any level.</li>
+</ul>
+</li>
+<li>
+<p><strong>P – Partially Achieved (15% - 50%)</strong></p>
+<ul>
+<li><strong>Description:</strong> The process attribute is partially achieved. Some evidence exists that the attribute has been addressed, but it is inconsistent or incomplete.</li>
+<li><strong>Implication:</strong> A "P" rating shows that while some effort has been made to address the process attribute, there are still considerable deficiencies that need to be addressed to achieve higher capability levels.</li>
+</ul>
+</li>
+<li>
+<p><strong>L – Largely Achieved (50% - 85%)</strong></p>
+<ul>
+<li><strong>Description:</strong> The process attribute is largely achieved. There is substantial evidence that the attribute has been addressed, but there may be minor gaps or areas for improvement.</li>
+<li><strong>Implication:</strong> An "L" rating suggests that the process is mostly on track, with only a few areas needing refinement. It indicates a solid foundation for achieving the process attribute but with room for further enhancement.</li>
+</ul>
+</li>
+<li>
+<p><strong>F – Fully Achieved (85% - 100%)</strong></p>
+<ul>
+<li><strong>Description:</strong> The process attribute is fully achieved. There is comprehensive evidence that the attribute has been addressed and meets the required standards.</li>
+<li><strong>Implication:</strong> A rating of "F" demonstrates that the process attribute is fully integrated into the process, with little to no gaps. This is the ideal rating for achieving higher process capability levels.</li>
+</ul>
+</li>
+</ol>
+<h2 id="application-of-the-nplf-scheme-in-aspice-assessments"><a class="header" href="#application-of-the-nplf-scheme-in-aspice-assessments"><strong>Application of the NPLF Scheme in ASPICE Assessments</strong></a></h2>
+<p>To determine a process's capability level, each process attribute (PA) is rated using the NPLF scheme. The overall capability level is then derived based on these ratings.</p>
+<ul>
+<li>
+<p><strong>Capability Level Achievement:</strong></p>
+<ul>
+<li>A capability level is reached if all the process attributes of the levels below are fully achieved (F), and the attributes of the current level are largely (L) or fully (F) achieved.</li>
+<li>For instance, to achieve <strong>Capability Level 2</strong>, a process must have fully achieved (F) the process attributes at Level 1 and have largely (L) or fully (F) achieved the attributes at Level 2.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Ratings:</strong></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th>Level 1</th><th></th><th>Level 2</th><th></th><th>Level 3</th><th></th><th></th></tr></thead><tbody>
+<tr><td></td><td>PA 1.1</td><td></td><td>PA 2.1</td><td>PA 2.2</td><td>PA 3.1</td><td>PA 3.2</td><td></td></tr>
+<tr><td>Process A</td><td>F</td><td>F</td><td>F</td><td>L</td><td>L</td><td>3</td><td></td></tr>
+<tr><td>Process B</td><td>F</td><td>L</td><td>L</td><td>P</td><td>N</td><td>1</td><td></td></tr>
+<tr><td>Process C</td><td>P</td><td>P</td><td>L</td><td>P</td><td>P</td><td>0</td><td></td></tr>
+<tr><td>Process D</td><td>F</td><td>F</td><td>L</td><td>N</td><td>N</td><td>2</td><td></td></tr>
+</tbody></table>
+</div></li>
+</ul>
+<p>In the example table, each process's capability level is determined by evaluating its performance across multiple process attributes at different levels. The ratings (N, P, L, F) provide insight into where each process stands in terms of capability and what improvements are needed to advance to the next level.</p>
+<h2 id="implications-of-the-nplf-scheme"><a class="header" href="#implications-of-the-nplf-scheme"><strong>Implications of the NPLF Scheme</strong></a></h2>
+<ul>
+<li><strong>Focused Improvement:</strong> The NPLF scheme allows organizations to pinpoint specific areas of weakness within their processes. By focusing on improving process attributes rated as N or P, organizations can systematically work towards achieving higher capability levels.</li>
+<li><strong>Objective Measurement:</strong> The scheme provides an objective way to measure process performance, ensuring that assessments are consistent and aligned with industry standards.</li>
+<li><strong>Benchmarking and Progress Tracking:</strong> By regularly applying the NPLF scheme in assessments, organizations can track their progress over time, benchmarking their performance against industry standards and competitors.</li>
+</ul>
+<h1 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h1>
+<p>The <strong>NPLF assessment rating scheme</strong> is a fundamental tool in the ASPICE framework, enabling organizations to evaluate and enhance the capability of their software development processes. By categorizing process attributes into Not Achieved, Partially Achieved, Largely Achieved, and Fully Achieved, the NPLF scheme provides a clear, structured path for continuous improvement. Organizations that effectively utilize this scheme can systematically improve their processes, ultimately achieving higher capability levels and ensuring consistent, high-quality outcomes in their automotive software projects.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../04/00.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../04/02.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../04/00.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../04/02.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

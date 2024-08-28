@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ISO/IEC 33020:2015</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../01/00.html"><strong aria-hidden="true">1.</strong> Motivation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../01/01.html"><strong aria-hidden="true">1.1.</strong> Situations</a></li><li class="chapter-item expanded "><a href="../01/02.html"><strong aria-hidden="true">1.2.</strong> Improvement</a></li></ol></li><li class="chapter-item expanded "><a href="../02/00.html"><strong aria-hidden="true">2.</strong> Introduction to Automotive SPICE</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../02/01.html"><strong aria-hidden="true">2.1.</strong> About ASPICE</a></li><li class="chapter-item expanded "><a href="../02/02.html"><strong aria-hidden="true">2.2.</strong> Objectives</a></li><li class="chapter-item expanded "><a href="../02/03.html"><strong aria-hidden="true">2.3.</strong> Usage of the term “system”</a></li></ol></li><li class="chapter-item expanded "><a href="../03/00.html"><strong aria-hidden="true">3.</strong> Process dimension in ASPICE</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../03/01.html" class="active"><strong aria-hidden="true">3.1.</strong> ISO/IEC 33020:2015</a></li><li class="chapter-item expanded "><a href="../03/02.html"><strong aria-hidden="true">3.2.</strong> Level 0: Incomplete process</a></li><li class="chapter-item expanded "><a href="../03/03.html"><strong aria-hidden="true">3.3.</strong> Level 1: Performed process</a></li><li class="chapter-item expanded "><a href="../03/04.html"><strong aria-hidden="true">3.4.</strong> Level 2: Managed process</a></li><li class="chapter-item expanded "><a href="../03/05.html"><strong aria-hidden="true">3.5.</strong> Level 3: Established process</a></li></ol></li><li class="chapter-item expanded "><a href="../04/00.html"><strong aria-hidden="true">4.</strong> Capability Dimension and Rating Method</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../04/01.html"><strong aria-hidden="true">4.1.</strong> Rating Scheme NPLF</a></li><li class="chapter-item expanded "><a href="../04/02.html"><strong aria-hidden="true">4.2.</strong> How to rate a level for a process</a></li></ol></li><li class="chapter-item expanded "><a href="../05/00.html"><strong aria-hidden="true">5.</strong> Level 1 - Base Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../05/01.html"><strong aria-hidden="true">5.1.</strong> Best practices and output work products</a></li><li class="chapter-item expanded "><a href="../05/02.html"><strong aria-hidden="true">5.2.</strong> Process descriptions</a></li></ol></li><li class="chapter-item expanded "><a href="../06/00.html"><strong aria-hidden="true">6.</strong> Level 2 - Generic Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../06/01.html"><strong aria-hidden="true">6.1.</strong> Performance management</a></li><li class="chapter-item expanded "><a href="../06/02.html"><strong aria-hidden="true">6.2.</strong> Work product management</a></li></ol></li><li class="chapter-item expanded "><a href="../07/00.html"><strong aria-hidden="true">7.</strong> ASPICE Main Concepts and Assessment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../07/01.html"><strong aria-hidden="true">7.1.</strong> Traceability in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/02.html"><strong aria-hidden="true">7.2.</strong> Bidirectional Traceability in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/03.html"><strong aria-hidden="true">7.3.</strong> Plug-in concept in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/04.html"><strong aria-hidden="true">7.4.</strong> Assessment purpose</a></li></ol></li><li class="chapter-item expanded "><a href="../08/00.html"><strong aria-hidden="true">8.</strong> Process Improvement on Projects</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="understanding-aspice-process-groups-and-capability-levels"><a class="header" href="#understanding-aspice-process-groups-and-capability-levels">Understanding ASPICE Process Groups and Capability Levels</a></h1>
+<p>In ASPICE, understanding the different process groups and their associated capability levels is crucial for assessing and improving the software development processes within automotive projects. The provided images illustrate the ASPICE process groups and the corresponding ISO/IEC 33020:2015 process capability levels. Below, we delve into the key aspects of these elements.</p>
+<h2 id="aspice-process-groups"><a class="header" href="#aspice-process-groups"><strong>ASPICE Process Groups</strong></a></h2>
+<p>ASPICE divides processes into distinct groups based on their role in the software development lifecycle. Each process group contains several processes that address specific aspects of software engineering, management, and support. Here’s a breakdown of the main groups as depicted in the first image:</p>
+<ol>
+<li>
+<p><strong>System Engineering Process Group (SYS):</strong></p>
+<ul>
+<li><strong>Key Processes:</strong>
+<ul>
+<li>SYS.1: Requirements Elicitation</li>
+<li>SYS.2: System Requirements Analysis</li>
+<li>SYS.3: System Architectural Design</li>
+<li>SYS.4: System Integration and Integration Test</li>
+<li>SYS.5: System Qualification Test</li>
+</ul>
+</li>
+<li><strong>Purpose:</strong> Focuses on the activities related to the engineering of the system as a whole, including requirements gathering, system design, integration, and testing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Software Engineering Process Group (SWE):</strong></p>
+<ul>
+<li><strong>Key Processes:</strong>
+<ul>
+<li>SWE.1: Software Requirements Analysis</li>
+<li>SWE.2: Software Architectural Design</li>
+<li>SWE.3: Software Detailed Design and Unit Construction</li>
+<li>SWE.4: Software Unit Verification</li>
+<li>SWE.5: Software Integration and Integration Test</li>
+<li>SWE.6: Software Qualification Test</li>
+</ul>
+</li>
+<li><strong>Purpose:</strong> Encompasses processes specifically related to software development, including requirements, design, coding, integration, and testing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Supporting Process Group (SUP):</strong></p>
+<ul>
+<li><strong>Key Processes:</strong>
+<ul>
+<li>SUP.1: Quality Assurance</li>
+<li>SUP.4: Joint Review</li>
+<li>SUP.7: Documentation</li>
+<li>SUP.8: Configuration Management</li>
+<li>SUP.9: Problem Resolution Management</li>
+<li>SUP.10: Change Request Management</li>
+</ul>
+</li>
+<li><strong>Purpose:</strong> These processes provide the necessary support functions that ensure the main engineering processes are executed effectively, including quality assurance, reviews, documentation, and configuration management.</li>
+</ul>
+</li>
+<li>
+<p><strong>Management Process Group (MAN):</strong></p>
+<ul>
+<li><strong>Key Processes:</strong>
+<ul>
+<li>MAN.3: Project Management</li>
+<li>MAN.5: Risk Management</li>
+<li>MAN.6: Measurement</li>
+</ul>
+</li>
+<li><strong>Purpose:</strong> Focuses on the management aspects of projects, ensuring that they are planned, monitored, and controlled efficiently.</li>
+</ul>
+</li>
+<li>
+<p><strong>Supply Process Group (SPL) and Acquisition Process Group (ACQ):</strong></p>
+<ul>
+<li><strong>Key Processes:</strong>
+<ul>
+<li>SPL.1: Supplier Tendering</li>
+<li>SPL.2: Product Release</li>
+<li>ACQ.4: Supplier Monitoring</li>
+<li>ACQ.13: Project Requirements</li>
+<li>ACQ.14: Supplier Qualification</li>
+</ul>
+</li>
+<li><strong>Purpose:</strong> These processes deal with managing the relationship between the OEM and suppliers, including procurement, supplier selection, and monitoring.</li>
+</ul>
+</li>
+<li>
+<p><strong>Process Improvement Process Group (PIM) and Reuse Process Group (REU):</strong></p>
+<ul>
+<li><strong>Key Processes:</strong>
+<ul>
+<li>PIM.3: Process Improvement</li>
+<li>REU.2: Reuse Program Management</li>
+</ul>
+</li>
+<li><strong>Purpose:</strong> PIM processes are focused on the continuous improvement of processes, while REU processes manage the reuse of software components across different projects.</li>
+</ul>
+</li>
+</ol>
+<h2 id="aspice-capability-levels-isoiec-330202015"><a class="header" href="#aspice-capability-levels-isoiec-330202015"><strong>ASPICE Capability Levels (ISO/IEC 33020:2015)</strong></a></h2>
+<p>The second image outlines the capability levels defined by ISO/IEC 33020:2015, which are used to assess the maturity of processes within the ASPICE framework. Understanding these levels helps organizations determine their current state and identify areas for improvement.</p>
+<ol>
+<li>
+<p><strong>Level 0: Incomplete Process</strong></p>
+<ul>
+<li><strong>Explanation:</strong> No process is evident, or the process does not produce the necessary output.</li>
+</ul>
+</li>
+<li>
+<p><strong>Level 1: Performed Process</strong></p>
+<ul>
+<li><strong>Process Attribute:</strong> Process Performance (PA 1.1)</li>
+<li><strong>Explanation:</strong> The process is performed and produces the necessary output, but it may not be managed or standardized.</li>
+</ul>
+</li>
+<li>
+<p><strong>Level 2: Managed Process</strong></p>
+<ul>
+<li><strong>Process Attributes:</strong>
+<ul>
+<li>Work Product Management (PA 2.2)</li>
+<li>Performance Management (PA 2.1)</li>
+</ul>
+</li>
+<li><strong>Explanation:</strong> The process is not only performed but also managed. This means that activities and work products are systematically planned, tracked, and controlled.</li>
+</ul>
+</li>
+<li>
+<p><strong>Level 3: Established Process</strong></p>
+<ul>
+<li><strong>Process Attributes:</strong>
+<ul>
+<li>Process Definition (PA 3.1)</li>
+<li>Process Deployment (PA 3.2)</li>
+</ul>
+</li>
+<li><strong>Explanation:</strong> The process is standardized, documented, and maintained. It operates within a defined process architecture and is consistently applied across projects.</li>
+</ul>
+</li>
+<li>
+<p><strong>Levels 4 and 5 (Predictable and Innovating Processes)</strong></p>
+<ul>
+<li><strong>Higher levels of capability involve establishing quantitative control over the processes (Level 4) and continually improving the processes in response to changing organizational goals (Level 5).</strong></li>
+<li><strong>Explanation:</strong> These levels focus on refining processes to achieve greater predictability and responsiveness, driving continuous innovation and improvement.</li>
+</ul>
+</li>
+</ol>
+<h1 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h1>
+<p>The combination of ASPICE process groups and capability levels provides a comprehensive framework for assessing and improving automotive software development processes. By understanding and applying these concepts, organizations can enhance their process maturity, leading to higher quality outputs, improved efficiency, and greater alignment with industry standards. This structured approach ensures that organizations can meet the stringent demands of the automotive sector, fostering innovation and delivering reliable, high-performing products.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../03/00.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../03/02.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../03/00.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../03/02.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

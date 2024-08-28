@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Process descriptions</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../01/00.html"><strong aria-hidden="true">1.</strong> Motivation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../01/01.html"><strong aria-hidden="true">1.1.</strong> Situations</a></li><li class="chapter-item expanded "><a href="../01/02.html"><strong aria-hidden="true">1.2.</strong> Improvement</a></li></ol></li><li class="chapter-item expanded "><a href="../02/00.html"><strong aria-hidden="true">2.</strong> Introduction to Automotive SPICE</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../02/01.html"><strong aria-hidden="true">2.1.</strong> About ASPICE</a></li><li class="chapter-item expanded "><a href="../02/02.html"><strong aria-hidden="true">2.2.</strong> Objectives</a></li><li class="chapter-item expanded "><a href="../02/03.html"><strong aria-hidden="true">2.3.</strong> Usage of the term “system”</a></li></ol></li><li class="chapter-item expanded "><a href="../03/00.html"><strong aria-hidden="true">3.</strong> Process dimension in ASPICE</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../03/01.html"><strong aria-hidden="true">3.1.</strong> ISO/IEC 33020:2015</a></li><li class="chapter-item expanded "><a href="../03/02.html"><strong aria-hidden="true">3.2.</strong> Level 0: Incomplete process</a></li><li class="chapter-item expanded "><a href="../03/03.html"><strong aria-hidden="true">3.3.</strong> Level 1: Performed process</a></li><li class="chapter-item expanded "><a href="../03/04.html"><strong aria-hidden="true">3.4.</strong> Level 2: Managed process</a></li><li class="chapter-item expanded "><a href="../03/05.html"><strong aria-hidden="true">3.5.</strong> Level 3: Established process</a></li></ol></li><li class="chapter-item expanded "><a href="../04/00.html"><strong aria-hidden="true">4.</strong> Capability Dimension and Rating Method</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../04/01.html"><strong aria-hidden="true">4.1.</strong> Rating Scheme NPLF</a></li><li class="chapter-item expanded "><a href="../04/02.html"><strong aria-hidden="true">4.2.</strong> How to rate a level for a process</a></li></ol></li><li class="chapter-item expanded "><a href="../05/00.html"><strong aria-hidden="true">5.</strong> Level 1 - Base Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../05/01.html"><strong aria-hidden="true">5.1.</strong> Best practices and output work products</a></li><li class="chapter-item expanded "><a href="../05/02.html" class="active"><strong aria-hidden="true">5.2.</strong> Process descriptions</a></li></ol></li><li class="chapter-item expanded "><a href="../06/00.html"><strong aria-hidden="true">6.</strong> Level 2 - Generic Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../06/01.html"><strong aria-hidden="true">6.1.</strong> Performance management</a></li><li class="chapter-item expanded "><a href="../06/02.html"><strong aria-hidden="true">6.2.</strong> Work product management</a></li></ol></li><li class="chapter-item expanded "><a href="../07/00.html"><strong aria-hidden="true">7.</strong> ASPICE Main Concepts and Assessment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../07/01.html"><strong aria-hidden="true">7.1.</strong> Traceability in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/02.html"><strong aria-hidden="true">7.2.</strong> Bidirectional Traceability in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/03.html"><strong aria-hidden="true">7.3.</strong> Plug-in concept in ASPICE</a></li><li class="chapter-item expanded "><a href="../07/04.html"><strong aria-hidden="true">7.4.</strong> Assessment purpose</a></li></ol></li><li class="chapter-item expanded "><a href="../08/00.html"><strong aria-hidden="true">8.</strong> Process Improvement on Projects</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="process-descriptions-in-aspice-example-swe3"><a class="header" href="#process-descriptions-in-aspice-example-swe3">Process Descriptions in ASPICE: Example SWE.3</a></h1>
+<p>Automotive SPICE (ASPICE) offers a structured and rigorous approach to defining and assessing software development processes. Understanding the intricacies of these processes is crucial for organizations aiming to meet the high standards of the automotive industry. This detailed exploration of the SWE.3 process—Software Detailed Design and Unit Construction—illustrates how ASPICE organizes and manages process descriptions through the Process Reference Model (PRM) and Process Assessment Model (PAM). These models ensure consistency, quality, and traceability in software development.</p>
+<h2 id="1-process-id-and-process-name-identifying-and-classifying-the-process"><a class="header" href="#1-process-id-and-process-name-identifying-and-classifying-the-process"><strong>1. Process ID and Process Name: Identifying and Classifying the Process</strong></a></h2>
+<ul>
+<li>
+<p><strong>Process ID (SWE.3):</strong></p>
+<ul>
+<li>
+<p>The <strong>Process ID</strong> serves as a unique identifier within the ASPICE framework. The "SWE" prefix indicates that the process is part of the Software Engineering group, which focuses on the development and maintenance of software within the automotive domain. The number following the prefix (in this case, "3") indicates the specific process within that group. SWE.3, therefore, is the third process under the Software Engineering category.</p>
+</li>
+<li>
+<p>This structured naming convention allows for easy reference and categorization of processes, facilitating communication and documentation across various stakeholders involved in the project.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Process Name:</strong></p>
+<ul>
+<li>The <strong>Process Name</strong> provides a clear, descriptive label for the process. "Software Detailed Design and Unit Construction" succinctly conveys that this process is concerned with the detailed design phase of software development, as well as the construction (coding and implementation) of software units. This name aligns with the overall goals of ensuring that software designs are thoroughly developed and that software units are accurately implemented according to these designs.</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-process-purpose-defining-the-functional-objectives"><a class="header" href="#2-process-purpose-defining-the-functional-objectives"><strong>2. Process Purpose: Defining the Functional Objectives</strong></a></h2>
+<ul>
+<li><strong>Process Purpose:</strong>
+<ul>
+<li>
+<p>The <strong>Process Purpose</strong> section of the PRM articulates the specific functional objectives of the process. For SWE.3, the purpose is to "provide an evaluated detailed design for the software units and to produce the software units."</p>
+</li>
+<li>
+<p>This means that the process is intended to ensure that:</p>
+<ul>
+<li>A detailed software design is created, which adheres to the architectural requirements established in earlier phases.</li>
+<li>The software units are constructed based on this design, with a focus on meeting all specified functional and non-functional requirements.</li>
+<li>The design and construction processes are validated to ensure they meet the required standards and that the software behaves as expected in its operational environment.</li>
+</ul>
+</li>
+<li>
+<p>The purpose sets the stage for the subsequent activities and outcomes, ensuring that all stakeholders have a shared understanding of what the process aims to achieve.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-process-outcomes-expected-results-from-process-implementation"><a class="header" href="#3-process-outcomes-expected-results-from-process-implementation"><strong>3. Process Outcomes: Expected Results from Process Implementation</strong></a></h2>
+<ul>
+<li><strong>Process Outcomes:</strong>
+<ul>
+<li>
+<p><strong>Process Outcomes</strong> are critical as they define the specific, measurable results that should be achieved if the process is implemented successfully. These outcomes provide a clear benchmark against which the effectiveness of the process can be evaluated.</p>
+</li>
+<li>
+<p>For SWE.3, the outcomes include:</p>
+<ol>
+<li><strong>Detailed Software Design:</strong> A comprehensive design is developed that fully describes the software units, ensuring all components are well-defined and meet the architectural requirements.</li>
+<li><strong>Defined Interfaces:</strong> Interfaces of each software unit are specified, ensuring that components can communicate and interact seamlessly with each other.</li>
+<li><strong>Dynamic Behavior Description:</strong> The dynamic behavior of the software units, including their interactions, is clearly described, which is crucial for understanding how the software will operate in a live environment.</li>
+<li><strong>Consistency and Traceability:</strong> There is consistency and bidirectional traceability between software requirements and software units, ensuring that every requirement is accounted for in the design and that the design can be traced back to the original requirements. This also includes traceability between the software architectural design and the software detailed design.</li>
+<li><strong>Agreed Design:</strong> The software detailed design and its relationship to the software architectural design are agreed upon and communicated to all affected parties, ensuring alignment across the development team.</li>
+<li><strong>Software Units Produced:</strong> Software units are constructed according to the detailed design, ensuring that they are ready for integration and testing.</li>
+</ol>
+</li>
+<li>
+<p>These outcomes ensure that the process contributes to the overall quality and functionality of the software, aligning with both customer requirements and industry standards.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-base-practices-activities-to-achieve-process-goals"><a class="header" href="#4-base-practices-activities-to-achieve-process-goals"><strong>4. Base Practices: Activities to Achieve Process Goals</strong></a></h2>
+<ul>
+<li><strong>Base Practices:</strong>
+<ul>
+<li>
+<p><strong>Base Practices</strong> are the activities that need to be performed to achieve the process outcomes. They are described at an abstract level, focusing on what needs to be done, without prescribing how these activities should be executed. This flexibility allows organizations to tailor their implementation of these practices to their specific contexts while still adhering to the ASPICE framework.</p>
+</li>
+<li>
+<p>In the SWE.3 process, the base practices include:</p>
+<ul>
+<li><strong>SWE.3.BP1: Develop Software Detailed Design:</strong> This practice involves creating a detailed design for each software component, ensuring that the design specifies all software units with respect to both functional and non-functional requirements. The outcome of this practice is a comprehensive design document that guides the construction phase.</li>
+<li><strong>SWE.3.BP2: Define Interfaces of Software Units:</strong> This practice requires identifying, specifying, and documenting the interfaces for each software unit. This is critical for ensuring that software components can interact correctly within the broader system.</li>
+<li><strong>SWE.3.BP3: Describe Dynamic Behavior:</strong> This involves evaluating and documenting the dynamic behavior of software units and their interactions. Understanding how units behave and interact dynamically is essential for predicting system performance and identifying potential issues.</li>
+<li><strong>SWE.3.BP4: Evaluate Software Detailed Design:</strong> This practice involves assessing the software detailed design in terms of factors like interoperability, technical complexity, risks, and testability. This evaluation helps identify potential issues early in the development process, allowing for timely corrections.</li>
+</ul>
+</li>
+<li>
+<p>By systematically implementing these base practices, organizations can ensure that the process outcomes are achieved, leading to high-quality software products.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-output-work-products-tangible-deliverables"><a class="header" href="#5-output-work-products-tangible-deliverables"><strong>5. Output Work Products: Tangible Deliverables</strong></a></h2>
+<ul>
+<li><strong>Output Work Products (WPs):</strong>
+<ul>
+<li>
+<p><strong>Output Work Products</strong> are the tangible deliverables that result from implementing the base practices. These work products serve as evidence that the process has been executed as intended and that the desired outcomes have been achieved. Each work product is associated with specific outcomes and is listed with a unique name and reference ID.</p>
+</li>
+<li>
+<p>For the SWE.3 process, the output work products include:</p>
+<ul>
+<li><strong>04-05 Software Detailed Design:</strong> This document serves as the primary deliverable from the detailed design phase, encompassing all aspects of the software's design, including architecture, unit specifications, and interface definitions. It is linked to outcomes 1, 2, and 3.</li>
+<li><strong>11-05 Software Unit:</strong> This is the actual implementation of the software as defined in the detailed design. It is linked to outcome 6 and represents the transition from design to executable code.</li>
+<li><strong>13-04 Communication Record:</strong> This document tracks all communication and coordination activities related to the design and construction phases, ensuring transparency and traceability. It is linked to outcome 5.</li>
+<li><strong>13-19 Review Record:</strong> This record documents the results of formal reviews conducted on the design and construction work products, ensuring that they meet quality and compliance standards. It is linked to outcome 4.</li>
+<li><strong>13-22 Traceability Record:</strong> This document provides evidence of bidirectional traceability between requirements, design elements, and the final implementation. It ensures that all requirements are met and that any changes are traceable back to the original specifications. It is linked to outcome 4.</li>
+</ul>
+</li>
+<li>
+<p>These work products are crucial for both internal validation and external assessments, demonstrating that the organization’s processes are effective and compliant with ASPICE standards.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-work-products-characteristics-attributes-of-high-quality-deliverables"><a class="header" href="#6-work-products-characteristics-attributes-of-high-quality-deliverables"><strong>6. Work Products Characteristics: Attributes of High-Quality Deliverables</strong></a></h2>
+<ul>
+<li><strong>Work Products Characteristics:</strong>
+<ul>
+<li>
+<p><strong>Work Products Characteristics</strong> describe the potential attributes of the work products. These attributes ensure that the deliverables not only meet the process outcomes but also adhere to industry best practices and quality standards. The characteristics provide a detailed description of what makes a work product complete and of high quality.</p>
+</li>
+<li>
+<p>For example, the <strong>Software Unit (11-05)</strong> work product should have the following characteristics:</p>
+<ul>
+<li><strong>Coding Standards:</strong> The software should follow established coding standards that are appropriate for the language and application. This includes proper commenting, optimized structure, meaningful naming conventions, and consistent error handling.</li>
+<li><strong>Data Definition Standards:</strong> The software should adhere to data definition standards, ensuring that variables, data types, and data structures are clearly defined and consistently used.</li>
+<li><strong>Entity Relationships:</strong> The relationships between different entities within the software should be well-defined, ensuring that the software operates as intended.</li>
+<li><strong>Database Layouts:</strong> If applicable, the software should have well-defined database layouts that optimize performance and ensure data integrity.</li>
+<li><strong>File Structures and Blocking:</strong> The organization of files within the software should be logical and support efficient access and modification.</li>
+<li><strong>Algorithms:</strong> Any algorithms used within the software should be clearly defined, optimized, and thoroughly tested.</li>
+<li><strong>Functional Interfaces:</strong> The interfaces between different functional components should be clearly defined and tested to ensure seamless integration.</li>
+</ul>
+</li>
+<li>
+<p>These characteristics ensure that the work products are not only functional but also maintainable, scalable, and reliable, which are critical factors in the automotive industry.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
+<p>The comprehensive structure of process descriptions in ASPICE, as exemplified by SWE.3, ensures that software development processes are well-defined, systematically implemented, and rigorously assessed. Each section of the PRM, from Process ID to Work Products Characteristics, plays a crucial role in guiding organizations toward achieving high-quality software that meets the stringent requirements of the automotive industry.</p>
+<p>By breaking down the process into clearly defined components—Purpose, Outcomes, Base Practices, Output Work Products, and Work Products Characteristics—ASPICE provides a robust framework that supports both process improvement and compliance with industry standards. This detailed approach ensures that organizations can not only meet current requirements but also continuously improve their processes to address future challenges in automotive software development.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../05/01.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../06/00.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../05/01.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../06/00.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
